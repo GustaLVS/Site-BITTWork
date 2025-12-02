@@ -610,7 +610,6 @@ body {
     color: #fff;
 }
 
-/* Cabeçalho */
 .accordion-header {
     width: 100%;
     padding: 28px 32px;
@@ -947,6 +946,239 @@ body {
     border-radius: 20px;
     object-fit: cover;
 }
+
+/* ============================
+   RESPONSIVIDADE GLOBAL
+   ============================ */
+@media (max-width: 1100px) {
+    .accordion-title {
+        font-size: 38px;
+    }
+    .features-title {
+        font-size: 36px;
+    }
+    .plans-title {
+        font-size: 38px;
+    }
+}
+
+/* ============================
+   TABLETS (≤ 900px)
+   ============================ */
+@media (max-width: 900px) {
+
+    /* Accordion */
+    .accordion-section {
+        padding: 100px 20px;
+    }
+
+    .accordion-title {
+        font-size: 34px;
+        margin-bottom: 40px;
+    }
+
+    .accordion-header {
+        font-size: 16px;
+        padding: 22px 26px;
+    }
+
+    .accordion-item.open .accordion-content {
+        padding: 22px 26px !important;
+    }
+
+    /* Features */
+    .features {
+        padding: 0 16px;
+    }
+
+    .features-title {
+        font-size: 32px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .feature-item {
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    /* Plans */
+    .plan-card {
+        padding: 40px;
+        gap: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .plan-info p {
+        max-width: 100%;
+    }
+
+    .plan-graphic,
+    .plan-resources {
+        width: 100%;
+    }
+
+    /* Premium Plus */
+    .plan-plus {
+        padding: 50px;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .plus-image {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .plus-image img {
+        max-width: 420px;
+    }
+}
+
+/* ============================
+   MOBILE (≤ 600px)
+   ============================ */
+@media (max-width: 600px) {
+
+    /* Accordion */
+    .accordion-section {
+        padding: 80px 14px;
+    }
+
+    .accordion-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .icon-circle {
+        width: 44px;
+        height: 44px;
+    }
+
+    .icon-star {
+        font-size: 22px;
+    }
+
+    .accordion-header {
+        font-size: 15px;
+        padding: 18px 20px;
+    }
+
+    .accordion-item.open .accordion-content {
+        padding: 18px 20px !important;
+    }
+
+    .accordion-content {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* Features */
+    .features-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .feature-item {
+        padding: 16px;
+    }
+
+    .feature-heading h3 {
+        font-size: 18px;
+    }
+
+    .feature-icon {
+        min-width: 44px;
+        height: 44px;
+    }
+
+    /* Plans */
+    .plans {
+        margin: 60px auto;
+    }
+
+    .plans-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .plan-card {
+        padding: 30px;
+        border-radius: 22px;
+        gap: 25px;
+    }
+
+    .plan-info h3 {
+        font-size: 20px;
+    }
+
+    .plan-info p {
+        font-size: 14px;
+    }
+
+    .bubble {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .resource {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+
+    /* Premium Plus */
+    .plan-plus {
+        padding: 40px 26px;
+        border-radius: 24px;
+    }
+
+    .plus-info h3 {
+        font-size: 22px;
+    }
+
+    .plus-info p {
+        font-size: 14px;
+    }
+
+    .plus-image img {
+        max-width: 350px;
+        border-radius: 18px;
+    }
+}
+
+/* ============================
+   MOBILE MINI (≤ 420px)
+   ============================ */
+@media (max-width: 420px) {
+    .accordion-title {
+        font-size: 24px;
+    }
+
+    .features-title {
+        font-size: 24px;
+    }
+
+    .plans-title {
+        font-size: 26px;
+    }
+
+    .plan-card {
+        padding: 24px;
+    }
+
+    .plus-image img {
+        max-width: 100%;
+    }
+
+    .bubble {
+        margin: 6px;
+    }
+}
+
 
 .planos-section {
             width: 100%;
