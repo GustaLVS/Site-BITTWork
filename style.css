@@ -25,21 +25,13 @@ body {
     z-index: 999;
 }
 
-/* LOGO NOVA */
+/* LOGO */
 .logo-img img {
-    height: 35px; /* ajuste se quiser maior/menor */
+    height: 35px;
     width: auto;
     display: block;
 }
 
-
-.brand-main {
-    font-weight: 800;
-    font-size: 22px;
-    letter-spacing: -0.6px;
-}
-
-/* LINKS DA NAVBAR */
 .nav-links {
     display: flex;
     gap: 35px;
@@ -75,7 +67,7 @@ body {
     transform: translateX(-50%);
 }
 
-/* ÍCONES */
+/* ICONES */
 .nav-right {
     display: flex;
     align-items: center;
@@ -89,7 +81,6 @@ body {
     border: 2px solid #e3e9f2;
     background: transparent;
     cursor: pointer;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,6 +103,77 @@ body {
 .icon-btn.active svg {
     stroke: #fff;
 }
+
+/* ------------------------------- */
+/* NAVBAR MOBILE */
+/* ------------------------------- */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #111;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Transformação para X */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* MENU MOBILE */
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 260px;
+        height: calc(100vh - 80px);
+        background: #fff;
+        flex-direction: column;
+        gap: 22px;
+        padding: 35px 25px;
+        border-left: 1px solid #e5e5e5;
+        transition: 0.35s;
+        z-index: 900;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
 
 /* HEADER */
 .hero {
@@ -512,7 +574,6 @@ body {
     color: #7b6dff;
 }
 
-/* ======== ACORDEÃO ======== */
 .accordion-container {
     max-width: 1180px;
     margin: 0 auto;
@@ -530,7 +591,6 @@ body {
     color: #333;
 }
 
-/* ÚLTIMO ITEM SEMPRE PRETO */
 .accordion-item.dark {
     background: #111 !important;
     color: #fff !important;
@@ -568,19 +628,16 @@ body {
     color: #222;
 }
 
-/* Seta */
 .arrow {
     transition: transform 0.25s ease, color 0.25s;
     font-size: 18px;
     opacity: 0.7;
 }
 
-/* Rotação ao abrir */
 .accordion-item.open .arrow {
     transform: rotate(180deg);
 }
 
-/* ======== ANIMAÇÃO DO CONTEÚDO ======== */
 .accordion-content {
     max-height: 0;
     overflow: hidden;
@@ -592,12 +649,10 @@ body {
     color: #333;
 }
 
-/* Quando abre */
 .accordion-item.open .accordion-content:not(.dark .accordion-content) {
     padding: 28px 32px;
 }
 
-/* Conteúdo do último item mantém o fundo preto */
 .accordion-item.dark .accordion-content {
     padding: 0 32px;
 }
@@ -612,10 +667,10 @@ body {
     color: #b6a8ff;
     font-weight: 600;
 }
-/* BACKGROUND TOTAL (ESQUERDA → DIREITA) */
+
 .features-bg {
     width: 100%;
-    background: #ffffff; /* fundo branco */
+    background: #ffffff;
     padding: 80px 0;
 }
 
