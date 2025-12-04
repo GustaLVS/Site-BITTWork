@@ -27,7 +27,7 @@ body {
 
 /* LOGO */
 .logo-img img {
-    height: 35px;
+    height: 45px;
     width: auto;
     display: block;
 }
@@ -1415,19 +1415,16 @@ footer {
     gap: 16px;
 }
 
-/* Logo Column */
 .logo-column {
     justify-content: flex-start;
 }
 
 .footer-logo-img {
-    height: 40px;  /* ajuste conforme necessário */
+    height: 45px;
     width: auto;
     display: block;
 }
 
-
-/* Footer Title */
 .footer-title {
     font-weight: 700;
     font-size: 16px;
@@ -1435,7 +1432,6 @@ footer {
     margin-bottom: 8px;
 }
 
-/* Partners Grid */
 .partners-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1458,14 +1454,12 @@ footer {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/* Footer Links */
 .footer-link {
     font-size: 14px;
     color: #666;
     line-height: 1.6;
 }
 
-/* Footer Text */
 .footer-text {
     font-size: 14px;
     color: #666;
@@ -1492,7 +1486,7 @@ justify-content: center;
 max-width: 60%;
 max-height: 60%;
 }
-/* Responsive */
+
 @media (max-width: 1024px) {
     .footer-container {
         grid-template-columns: 1fr 1fr;
