@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Download - Sistema</title>
-        <link rel="stylesheet" href="Download.css  " />
+        <title>Área do Cliente</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="AreaCliente.css" />
     </head>
-
     <body>
         <!-- NAVBAR -->
         <nav class="navbar">
@@ -20,24 +19,25 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html#inicio">Início</a></li>
                 <li><a href="index.html#sistema">Sistema</a></li>
-                <li><a href="index.html#areacliente">Área do Cliente</a></li>
-                <li><a href="index.html#planos">Planos</a></li>
                 <li>
-                    <a href="Download.html" class="active">Download</a>
+                    <a href="index.html#areacliente" class="active"
+                        >Área do Cliente</a
+                    >
                 </li>
+                <li><a href="index.html#planos">Planos</a></li>
+                <li><a href="Download.html">Download</a></li>
                 <li><a href="index.html#suporte">Suporte</a></li>
             </ul>
 
             <div class="nav-right">
-                <!-- LUPA -->
                 <button class="icon-btn">
                     <svg
-                        width="28"
-                        height="28"
+                        width="22"
+                        height="22"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="#616161"
-                        stroke-width="2.2"
+                        stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                     >
@@ -45,16 +45,14 @@
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
                 </button>
-
-                <!-- LUA ATIVA -->
                 <button class="icon-btn active">
                     <svg
-                        width="28"
-                        height="28"
+                        width="22"
+                        height="22"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="#ffffff"
-                        stroke-width="2.2"
+                        stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                     >
@@ -63,16 +61,14 @@
                         ></path>
                     </svg>
                 </button>
-
-                <!-- SOL -->
                 <button class="icon-btn">
                     <svg
-                        width="28"
-                        height="28"
+                        width="22"
+                        height="22"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="#616161"
-                        stroke-width="2.2"
+                        stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                     >
@@ -95,63 +91,104 @@
             </div>
         </nav>
 
-        <div class="container">
-            <div class="back" onclick="window.history.back()">< Voltar</div>
+        <main class="main-content">
+            <a href="#" class="btn-voltar">
+                <span class="seta">&lt;</span> Voltar
+            </a>
 
-            <div style="display: flex; align-items: center; gap: 10px">
-                <h1>Download</h1>
-                <span class="sub">› Sistema</span>
+            <div class="page-header">
+                <h1 class="titulo-principal">Àrea do Cliente</h1>
+                <span class="titulo-separador">&gt;</span>
+                <span class="titulo-subtitulo">Pedidos em Acompanhamento</span>
             </div>
 
-            <div class="form-section">
-                <p>Preencha o formulário para realizar o download</p>
+            <p class="cliente-info">
+                Cliente: 1097 - BRANDAO MELO COMERCIA DE GAS LTDA
+            </p>
 
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label>Razão Social ou Nome:</label>
-                        <input type="text" />
-                    </div>
+            <p class="listagem-titulo">Listagem Cronológica</p>
 
-                    <div class="form-group">
-                        <label>Pessoa de Contato:</label>
-                        <input type="text" />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Cidade:</label>
-                        <input type="text" />
-                    </div>
-
-                    <div class="form-group">
-                        <label>UF:</label>
-                        <input type="text" />
-                    </div>
-
-                    <div class="form-group">
-                        <label>DDD + Fone (Whatsapp):</label>
-                        <input type="text" />
-                    </div>
-
-                    <div class="form-group">
-                        <label>DDD + Fone 2:</label>
-                        <input type="text" />
-                    </div>
-
-                    <div class="form-group email-group">
-                        <label>E-mail:</label>
-                        <input type="email" />
-                    </div>
-                </div>
-
-                <div class="submit-row">
-                    <button class="btn-enviar">Enviar</button>
-                    <span class="submit-info"
-                        >O download começa assim que você enviar!</span
-                    >
-                </div>
+            <div class="filtro-container">
+                <label for="data">Data de Pedido:</label>
+                <input type="text" id="data" class="input-data" />
+                <button class="btn-pesquisar">Pesquisar</button>
             </div>
-        </div>
+            <section class="resultados-section">
+                <h2 class="resultados-titulo">Resultados</h2>
 
+                <!-- Tabela -->
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Número do Pedido</th>
+                                <th>Data e Hora</th>
+                                <th>Status de Entrega</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>14042204</td>
+                                <td>28/05/2024 - 09:34</td>
+                                <td>
+                                    <span class="status atrasado"
+                                        ><span class="dot"></span>Atrasado</span
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>14242204</td>
+                                <td>14/09/2024 - 09:42</td>
+                                <td>
+                                    <span class="status entregue"
+                                        ><span class="dot"></span>Entregue</span
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>24042202</td>
+                                <td>12/09/2024 - 11:34</td>
+                                <td>
+                                    <span class="status entregue"
+                                        ><span class="dot"></span>Entregue</span
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>54042204</td>
+                                <td>11/09/2024 - 10:14</td>
+                                <td>
+                                    <span class="status atrasado"
+                                        ><span class="dot"></span>Atrasado</span
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>12067204</td>
+                                <td>08/09/2018 - 19:34</td>
+                                <td>
+                                    <span class="status entregue"
+                                        ><span class="dot"></span>Entregue</span
+                                    >
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="paginacao">
+                    <a href="#" class="page-btn active">1</a>
+                    <a href="#" class="page-btn">2</a>
+                    <a href="#" class="page-btn">3</a>
+                    <a href="#" class="page-btn next">&raquo;</a>
+                </div>
+            </section>
+        </main>
         <footer id="suporte">
             <div class="footer-container">
                 <div class="footer-column logo-column">
