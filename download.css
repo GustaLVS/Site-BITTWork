@@ -81,6 +81,21 @@ input:focus {
     outline: none;
 }
 
+select {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    background: #fff;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #008cff;
+    outline: none;
+}
+
+
 .email-group {
     grid-column: span 2;
 }

@@ -6,6 +6,10 @@
         <title>Área do Cliente</title>
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="AreaCliente.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
     </head>
     <body>
         <!-- NAVBAR -->
@@ -30,165 +34,76 @@
             </ul>
 
             <div class="nav-right">
-                <button class="icon-btn">
-                    <svg
-                        width="22"
-                        height="22"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#616161"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                </button>
-                <button class="icon-btn active">
-                    <svg
-                        width="22"
-                        height="22"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#ffffff"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <path
-                            d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
-                        ></path>
-                    </svg>
-                </button>
-                <button class="icon-btn">
-                    <svg
-                        width="22"
-                        height="22"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#616161"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line
-                            x1="18.36"
-                            y1="18.36"
-                            x2="19.78"
-                            y2="19.78"
-                        ></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
+                <a href="https://facebook.com" target="_blank" class="icon-btn">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a
+                    href="https://instagram.com"
+                    target="_blank"
+                    class="icon-btn"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
             </div>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
-
         <main class="main-content">
-            <a href="#" class="btn-voltar">
-                <span class="seta">&lt;</span> Voltar
-            </a>
-
             <div class="page-header">
-                <h1 class="titulo-principal">Àrea do Cliente</h1>
-                <span class="titulo-separador">&gt;</span>
-                <span class="titulo-subtitulo">Pedidos em Acompanhamento</span>
+                <h1 class="titulo-principal">Área do Cliente</h1>
+                <span class="dropdown-icon">
+                    <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#1a1a1a"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </span>
             </div>
 
-            <p class="cliente-info">
-                Cliente: 1097 - BRANDAO MELO COMERCIA DE GAS LTDA
-            </p>
+            <section class="autenticacao-section">
+                <h2 class="autenticacao-titulo">Autenticação de Clientes</h2>
+                <p class="autenticacao-descricao">
+                    Por gentileza, para prosseguimento, informe os dados abaixo:
+                </p>
 
-            <p class="listagem-titulo">Listagem Cronológica</p>
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="codigo-cliente">Código do Cliente:</label>
+                        <input
+                            type="text"
+                            id="codigo-cliente"
+                            class="input-field"
+                        />
+                    </div>
 
-            <div class="filtro-container">
-                <label for="data">Data de Pedido:</label>
-                <input type="text" id="data" class="input-data" />
-                <button class="btn-pesquisar">Pesquisar</button>
-            </div>
-            <section class="resultados-section">
-                <h2 class="resultados-titulo">Resultados</h2>
-
-                <!-- Tabela -->
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Número do Pedido</th>
-                                <th>Data e Hora</th>
-                                <th>Status de Entrega</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>14042204</td>
-                                <td>28/05/2024 - 09:34</td>
-                                <td>
-                                    <span class="status atrasado"
-                                        ><span class="dot"></span>Atrasado</span
-                                    >
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>14242204</td>
-                                <td>14/09/2024 - 09:42</td>
-                                <td>
-                                    <span class="status entregue"
-                                        ><span class="dot"></span>Entregue</span
-                                    >
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>24042202</td>
-                                <td>12/09/2024 - 11:34</td>
-                                <td>
-                                    <span class="status entregue"
-                                        ><span class="dot"></span>Entregue</span
-                                    >
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>54042204</td>
-                                <td>11/09/2024 - 10:14</td>
-                                <td>
-                                    <span class="status atrasado"
-                                        ><span class="dot"></span>Atrasado</span
-                                    >
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>12067204</td>
-                                <td>08/09/2018 - 19:34</td>
-                                <td>
-                                    <span class="status entregue"
-                                        ><span class="dot"></span>Entregue</span
-                                    >
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="form-group">
+                        <label for="codigo-computador"
+                            >Código do Computador:</label
+                        >
+                        <input
+                            type="text"
+                            id="codigo-computador"
+                            class="input-field"
+                        />
+                    </div>
                 </div>
-                <div class="paginacao">
-                    <a href="#" class="page-btn active">1</a>
-                    <a href="#" class="page-btn">2</a>
-                    <a href="#" class="page-btn">3</a>
-                    <a href="#" class="page-btn next">&raquo;</a>
-                </div>
+
+                <button class="btn-acessar">Acessar</button>
             </section>
         </main>
+
         <footer id="suporte">
             <div class="footer-container">
                 <div class="footer-column logo-column">
